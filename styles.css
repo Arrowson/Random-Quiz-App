@@ -1,0 +1,12 @@
+body{
+    padding: 20px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    margin: 10px;
+}
+button{
+    margin: 10px;
+}

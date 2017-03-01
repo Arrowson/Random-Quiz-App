@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="quizApp">
+    <head>
+        <title>
+        </title>
+        <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script> 
+        <script src="app.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body ng-controller="MainController as mc">
+        
+        <br>
+                    <!--
+        <table>
+            <tr>
+                <td>
+                    Add Student
+                </td>
+                <td>
+                    <input type=text ng-model="mc.studentName">
+                </td>
+                <td>
+                    <button ng-click="mc.studentUpdate(mc.studentName, 0, 0)">Commit</button>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Add Question
+                </td>
+                <td>
+                    <input type=text ng-model="mc.question">
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Add Answer
+                </td>
+                <td>
+                    <input type=text ng-model="mc.answer">
+                </td>
+                <td>
+                    <button ng-click="mc.questionUpdate(mc.question, mc.answer)">commit</button>
+                </td>
+            </tr>
+        </table>
+        -->
+        
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <button ng-click="mc.showStudents()">show students</button>
+                </td>
+                <td>
+                    <button ng-click="mc.hideStudents()">hide students</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <button ng-click="mc.start()">Start Test</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{mc.randomStudent.name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{mc.randomQuestion.questionText}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Answer: <input type = "text" ng-model="mc.chosenAnswer"> <button ng-click="mc.checkAnswer()">Commit</button>
+                </td>
+            </tr>
+            <tr>
+                <td ng-show="mc.showMessage">
+                    {{mc.message}}
+                </td>
+            </tr>
+        </table>
+        <br>
+        <ul ng-if="mc.students != null" ng-show="mc.showstudents">
+            <li ng-repeat="student in mc.students"
+                       id="student{{$index}}"
+                       >
+                {{student.name}}     
+                [<label for="remove">Remove Student</label>
+                <input type="checkbox" ng-click="mc.removeStudent($index)">]
+            </li>
+        </ul>
+        <br>
+        <!--
+        <table>
+            <tr>
+                <td>
+                    <button ng-click="mc.showQuestions()">show questions</button>
+                </td>
+                <td>
+                    <button ng-click="mc.hideQuestions()">hide questions</button>
+                </td>
+            </tr>
+        </table>
+        
+        <ul ng-if="mc.questions != null" ng-show="mc.showquestions">
+            <li ng-repeat="question in mc.questions"
+                       id="question{{$index}}"
+                       >
+                {{question.question}} - {{question.answer}}    
+                [<label for="remove">Remove Question</label>
+                <input type="checkbox" ng-click="mc.removeQuestion($index)">]
+            </li>
+        </ul>
+        -->
+    </body>
+</html>

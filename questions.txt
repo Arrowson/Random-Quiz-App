@@ -1,0 +1,28 @@
+{
+    "questions":[
+        {
+            "questionText": "What is the RGB value of Blue?",
+            "answerText": "0,0,255",
+            "correctlyGuessed": 0,
+            "asked": 0
+        },
+        {
+            "questionText": "What is the structural framework we've been using?",
+            "answerText": "AngularJS",
+            "correctlyGuessed": 0,
+            "asked": 0
+        },
+        {
+            "questionText": "Who said, 'I'll be back'?",
+            "answerText": "Arnold Schwarzennegger",
+            "correctlyGuessed": 0,
+            "asked": 0
+        },
+        {
+            "questionText": "What is the name of the 8th Star Wars movie?",
+            "answerText": "The Last Jedi",
+            "correctlyGuessed": 0,
+            "asked": 0
+        }
+    ]
+}
